@@ -1,23 +1,10 @@
-// Code your solution here
-// const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
 function findMatching(drivers,string) {
-    return drivers.filter((drivers)=>{
-        if (drivers.toLowerCase()===string.toLowerCase()) {
-            return string
-        }
-    })
+    return drivers.filter((driver)=>driver.toLowerCase()===string.toLowerCase())
 }
-function fuzzyMatch(drivers,string) {
-    return drivers.filter((drivers)=>{
-        if (drivers.charAt(0)===string.charAt(0)) {
-            return string
-        }
-    })
+
+const fuzzyMatch = (drivers,string)=>{
+    return drivers.filter((driver)=>driver.startsWith(string))
 }
-function matchName(drivers,string) {
-    return drivers.filter((drivers)=>{
-        if (drivers.name===string) {
-            return string
-        }
-    })
-}
+
+const matchName = (drivers,string) =>drivers.filter((driver)=>driver.name===string)
+    
